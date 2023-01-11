@@ -7,18 +7,32 @@ public class logFileReading{
     {
         try {
             Scanner input = new Scanner(new FileInputStream("C:\\Users\\User\\OneDrive - Universiti Malaya\\WIX 1002 Fundamentals of Programming\\Sem 1 Assignment\\extracted_log"));
+            //PrintWriter writer = new PrintWriter(new FileOutputStream(""));
             String output;
-            Pattern pattern = Pattern.compile("done");
+           // Pattern pattern = Pattern.compile("done");
+            String JobID;
+
 
             int i = 0;
             while (input.hasNextLine()) {
-
                 output = input.nextLine();
-               Matcher matcher;
+                String[]arr = output.split(" ");
+                if(output.contains("done")&& output.contains("_job_complete"))
+                {
+                    JobID = arr[2].split("=")[1];
+                    i++;
+                }
+
+               /* Matcher matcher;
                 matcher = pattern.matcher(output);
                 boolean found = matcher.find();
-                if (found )
-                    i++;
+                if (found)
+                {
+                    //JobID = (arr[2].split("="));
+                    writer.println(output);
+
+                }*/
+
                 }
                 input.close();
                 System.out.println("Number of completed jobs: " + i);
