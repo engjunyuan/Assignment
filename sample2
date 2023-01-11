@@ -27,7 +27,7 @@
 [2022-06-01T09:16:55.690] _slurm_rpc_submit_batch_job: JobId=42809 InitPrio=20861 usec=408
 [2022-06-01T09:16:56.360] sched: Allocate JobId=42809 NodeList=cpu01 #CPUs=1 Partition=cpu-opteron
 [2022-06-01T09:28:29.792] _job_complete: JobId=42808 WEXITSTATUS 0
-[2022-06-01T09:28:29.793] _job_complete: JobId=42808 done
+[2022-06-01T09:28:29.793    ] _job_complete: JobId=42808 done
 [2022-06-01T09:28:44.482] _job_complete: JobId=42809 WEXITSTATUS 0
 [2022-06-01T09:28:44.482] _job_complete: JobId=42809 done
 [2022-06-01T09:36:15.587] _slurm_rpc_submit_batch_job: JobId=42810 InitPrio=21292 usec=404
