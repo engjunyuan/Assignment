@@ -52,6 +52,7 @@ public class AverageExecutionTime {
                         }
                     }
                 read_job_done = new BufferedReader(new FileReader("Job_Completed.txt"));
+
                 //read_job_done.reset();
                 if(d_total !=null && initial_time !=null && final_time!=null)
                     d_total = (duration.between(initial_time, final_time)).plus(d_total);
@@ -61,7 +62,7 @@ public class AverageExecutionTime {
                 }
 
 
-            //if(d_total!=null)
+
             average_time = d_total.dividedBy(i);
             System.out.println("Average execution time of the jobs submitted to UMHPC: " + average_time);
             String isoDuration = String.valueOf(average_time);
